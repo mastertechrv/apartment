@@ -67,7 +67,10 @@ Before you can switch to a new apartment tenant, you will need to create it. Whe
 you need to create a new tenant, you can run the following command:
 
 ```ruby
-Apartment::Tenant.create('tenant_name')
+Apartment::Tenant.create('tenant_name') - Depriciated Tenant Does not work - use Database Look Below
+```
+```ruby
+Apartment::Database.create('tenant_name') - Working
 ```
 
 If you're using the [prepend environment](https://github.com/influitive/apartment#handling-environments) config option or you AREN'T using Postgresql Schemas, this will create a tenant in the following format: "#{environment}\_tenant_name".
